@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import "nullstyle";
+@import "vars";
+@import "breakpoints";
+@import "components/buttons";
+@import "components/fonts";
+@import "header";
+@import "footer";
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	scroll-behavior: smooth;
+	position: relative;
+	font-family: Manrope;
+	overflow-x: hidden;
+	line-height: 1.2;
+	color: $black;
+}
+
+svg {
+	transition: 0.2s;
+
+	* {
+		transition: 0.2s;
+	}
+}
+
+body.lock {
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1920px;
+	padding: 0 80px;
+	margin: auto;
+
+	//@media screen and (max-width: 1024px) {
+	//	padding: 0 60px;
+	//}
+
+	//@media screen and (max-width: 768px) {
+	//	padding: 0 30px;
+	//}
+
+	//@media screen and (max-width: 480px) {
+	//	padding: 0 16px;
+	//}
+
+	@include lg-d {
+		padding: 0 60px;
+	}
+
+	@include md-d {
+		padding: 0 30px;
+	}
+
+	@include sm-d {
+		padding: 0 16px;
+	}
+}

@@ -1,0 +1,61 @@
+.primary-button,
+.primary-button_icon-text,
+.primary-button_icon {
+	height: 53px;
+	padding: 0 32px;
+
+	background: $primary;
+	border-radius: 10px;
+	color: $white;
+	font-size: 14px;
+	transition: 0.2s;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&:hover {
+		background: $primary-hover;
+	}
+
+	&:disabled {
+		background: $grey;
+		color: $grey2;
+	}
+}
+
+.primary-button_icon-text {
+	height: 60px;
+
+	gap: 8px;
+
+	svg {
+		*{
+			stroke: $white;
+		}
+	}
+
+	&:disabled {
+		svg {
+			*{
+				stroke: $grey2;
+			}
+		}
+	}
+}
+
+.primary-button_icon {
+	height: 60px;
+	width: 60px;
+	flex: 0 0 60px;
+
+	svg {
+		*{
+			stroke: $white;
+		}
+	}
+
+	&:disabled {
+		background: $grey2;
+	}
+}
