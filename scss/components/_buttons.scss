@@ -30,14 +30,14 @@
 	gap: 8px;
 
 	svg {
-		*{
+		* {
 			stroke: $white;
 		}
 	}
 
 	&:disabled {
 		svg {
-			*{
+			* {
 				stroke: $grey2;
 			}
 		}
@@ -50,7 +50,7 @@
 	flex: 0 0 60px;
 
 	svg {
-		*{
+		* {
 			stroke: $white;
 		}
 	}
@@ -58,4 +58,77 @@
 	&:disabled {
 		background: $grey2;
 	}
+}
+
+.secondary-button,
+.secondary-button_icon-text,
+.secondary-button_icon {
+	height: 50px;
+	padding: 0 32px;
+
+	background: white;
+	border-radius: 10px;
+	color: $primary;
+	font-size: 14px;
+	transition: 0.2s;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&:hover {
+		background: $primary-hover;
+		color: $primary-hover;
+
+		path {
+			stroke: $primary-hover;
+		}
+	}
+
+	&:disabled {
+		background: $grey2;
+		color: $grey2;
+
+		path {
+			stroke: $grey2;
+		}
+	}
+}
+
+.secondary-button_icon-text {
+	height: 60px;
+	gap: 8px;
+}
+
+.secondary-button_icon {
+	height: 60px;
+	width: 60px;
+	flex: 0 0 60px;
+}
+
+.text-button {
+	color: $primary;
+	transition: 0.2s;
+
+	&:hover {
+		color: $primary-hover;
+		font-weight: 700;
+	}
+
+	&:disabled {
+		color: $grey2;
+	}
+}
+
+.white-button {
+	background: white;
+	border-radius: 10px;
+	padding: 0 32px;
+	height: 50px;
+	color: $black;
+	font-size: 14px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

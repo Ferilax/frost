@@ -1,0 +1,190 @@
+.product {
+	border: 1px solid $primary;
+	border-radius: 10px;
+	padding: 20px;
+	height: 100%;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+	&__header {
+		position: relative;
+		width: 100%;
+
+		swiper-slide {
+			aspect-ratio: 190/170;
+			height: 170px;
+		}
+	}
+
+	&__bonus {
+		position: absolute;
+		z-index: 2;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		bottom: 0;
+		left: 0;
+		font-size: 14px;
+		width: 100%;
+		flex-wrap: wrap;
+
+		>* {
+			padding: 4px 8px;
+			border-radius: 6px;
+			white-space: nowrap;
+		}
+	}
+
+	&__body {
+		margin-top: 20px;
+	}
+
+	&__name {
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		/* number of lines to show */
+		line-clamp: 3;
+		-webkit-box-orient: vertical;
+
+		font-size: 18px;
+		font-weight: 700;
+
+		height: 65px;
+	}
+
+	&__bottom {
+		margin-top: 20px;
+		display: flex;
+		gap: 10px;
+	}
+
+	&__price {
+		font-weight: 700;
+		font-size: 18px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__price-old {
+		font-size: 14px;
+		font-weight: 700;
+		color: $grey2;
+		position: relative;
+
+		&::after {
+			content: "";
+			display: block;
+			width: 110%;
+			height: 2px;
+			transform: rotate(16deg) translate(-10%, -400%);
+			border-bottom: 1px solid #000;
+			background: white;
+		}
+	}
+
+	&__count {
+		font-size: 12px;
+		line-height: 1.7;
+	}
+
+	&__button {
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	&__right {
+
+		margin-left: auto;
+	}
+
+	&__pagination {
+		display: flex;
+		gap: 4px;
+
+		.swiper-pagination-bullet {
+			width: 6px;
+			height: 6px;
+			flex: 0 0 6px;
+			background: $grey;
+			border-radius: 50%;
+		}
+
+		.swiper-pagination-bullet-active {
+			background: $primary;
+		}
+	}
+
+	&__available {
+		margin-top: 4px;
+		font-size: 12px;
+		color: $grey2;
+
+		display: flex;
+		gap: 10px;
+	}
+
+	&__action {
+		color: #B71C1C;
+		background: #FFCDD2;
+	}
+
+	&__daily {
+		color: #E65100;
+		background: #FFF3E0;
+	}
+
+	&__new {
+		color: $primary;
+		background: #CFE0E0;
+	}
+
+	@media screen and (max-width: 650px) {
+		swiper-slide {
+			height: 145px;
+		}
+
+		&__name {
+			font-size: 14px;
+			-webkit-line-clamp: 4;
+			line-clamp: 4;
+			height: 68px;
+		}
+
+		&__bottom {
+			display: grid;
+			grid-template-columns: auto auto;
+			gap: 10px;
+			justify-content: start;
+			justify-items: start;
+		}
+
+		&__right {
+			grid-column: span 2;
+			margin: 0;
+
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+
+		&__available {
+			margin: 0;
+		}
+
+		&__price {
+			flex-direction: row;
+			gap: 8px;
+		}
+
+		&__bonus {
+			font-size: 12px;
+		}
+	}
+}

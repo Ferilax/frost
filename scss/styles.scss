@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @import "nullstyle";
+@import "fonts";
 @import "vars";
 @import "breakpoints";
+
+@import "templates";
+
 @import "components/buttons";
 @import "components/fonts";
+@import "components/product";
 @import "header";
 @import "footer";
+
+@import "modals";
+@import "pages/main";
 
 html {
 	scroll-behavior: smooth;
@@ -37,18 +45,6 @@ body.lock {
 	padding: 0 80px;
 	margin: auto;
 
-	//@media screen and (max-width: 1024px) {
-	//	padding: 0 60px;
-	//}
-
-	//@media screen and (max-width: 768px) {
-	//	padding: 0 30px;
-	//}
-
-	//@media screen and (max-width: 480px) {
-	//	padding: 0 16px;
-	//}
-
 	@include lg-d {
 		padding: 0 60px;
 	}
@@ -57,7 +53,90 @@ body.lock {
 		padding: 0 30px;
 	}
 
-	@include sm-d {
+	@media (max-width: 600px) {
 		padding: 0 16px;
+	}
+}
+
+swiper-container {
+	&::part(pagination) {
+		width: auto;
+		height: auto;
+
+		display: flex;
+		gap: 8px;
+	}
+
+	&::part(bullet) {
+		width: 8px;
+		height: 8px;
+		margin: 0;
+		border-radius: 1px;
+		background: $grey;
+		opacity: 1;
+	}
+
+	&::part(bullet-active) {
+		background: $primary;
+		width: 24px;
+		height: 8px;
+		margin: 0;
+		border-radius: 1px;
+		opacity: 1;
+	}
+}
+
+.pagination {
+	width: auto;
+	height: auto;
+
+	display: flex;
+	gap: 8px;
+	position: absolute;
+
+	.swiper-pagination-bullet {
+		width: 8px;
+		height: 8px;
+		margin: 0;
+		border-radius: 1px;
+		background: $grey;
+		opacity: 1;
+	}
+
+	.swiper-pagination-bullet-active {
+		background: $primary;
+		width: 24px;
+		height: 8px;
+		margin: 0;
+		border-radius: 1px;
+		opacity: 1;
+	}
+}
+
+.navigation {
+	display: flex;
+	border-radius: 10px;
+	overflow: hidden;
+
+	&__prev,
+	&__next {
+		width: 60px;
+		height: 60px;
+		flex: 0 0 60px;
+		transition: 0.2s;
+
+		background: $primary;
+
+		&:hover {
+			background: $primary-hover;
+		}
+
+		path {
+			stroke: $white;
+		}
+
+		&:disabled {
+			background: $grey;
+		}
 	}
 }

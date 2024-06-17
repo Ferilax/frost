@@ -1,5 +1,10 @@
 .header {
 	line-height: 1;
+	position: sticky;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	background: white;
 
 	&__row {
 		display: flex;
@@ -188,7 +193,7 @@
 		}
 	}
 
-	@media screen and (max-width: 1250px) {
+	@include lg-d {
 		&__catalog-trigger {
 			font-size: 16px;
 			margin-left: 20px;

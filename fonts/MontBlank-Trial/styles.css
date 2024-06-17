@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'MontBlanc-Trial-Bold';
+  src: url(./MontBlanc-Trial-Bold.eot);
+  src: url(./MontBlanc-Trial-Bold.eot?#iefix) format('embedded-opentype'),
+       url(./MontBlanc-Trial-Bold.otf) format('otf'),
+       url(./MontBlanc-Trial-Bold.svg#MontBlanc-Trial-Bold) format('svg'),
+       url(./MontBlanc-Trial-Bold.ttf) format('truetype'),
+       url(./MontBlanc-Trial-Bold.woff) format('woff'),
+       url(./MontBlanc-Trial-Bold.woff2) format('woff2');
+}
