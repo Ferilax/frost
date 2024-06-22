@@ -237,6 +237,39 @@
 	}
 }
 
+%primary-button-icon-text {
+	height: 60px;
+	padding: 0 32px;
+
+	background: $primary;
+	border-radius: 10px;
+	color: $white;
+	font-size: 14px;
+	transition: 0.2s;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+
+	path {
+		stroke: $white;
+	}
+
+	&:hover {
+		background: $primary-hover;
+	}
+
+	&:disabled {
+		background: $grey;
+		color: $grey2;
+
+		path {
+			stroke: $grey2;
+		}
+	}
+}
+
 //? Обертка label, внутри обязательно input, за которым следует span
 %checkbox {
 
@@ -289,5 +322,23 @@
 		font-weight: 700;
 		line-height: 1.2;
 		font-size: 28px;
+	}
+}
+
+%container {
+	max-width: 1920px;
+	padding: 0 80px;
+	margin: auto;
+
+	@include lg-d {
+		padding: 0 60px;
+	}
+
+	@include md-d {
+		padding: 0 30px;
+	}
+
+	@media (max-width: 600px) {
+		padding: 0 16px;
 	}
 }

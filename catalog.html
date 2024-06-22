@@ -2148,12 +2148,19 @@
 					<div class="catalog-content__title">Зарегистрировавшись как профессиональный клиент вы получаете цены гораздо
 						ниже!</div>
 					<div class="catalog-content__text">
-						Хотите узнать как стать профессиональным клиентом? Позвоните нам <a href="tel:+78007002019"
-							class="catalog-content__tel">8-800-700-2019</a>
+						Хотите узнать как стать профессиональным клиентом?
+						<span class="catalog-content__call">Позвоните нам <a href="tel:+78007002019" class="catalog-content__tel">8-800-700-2019</a></span>
 					</div>
 
 					<div class="catalog-content__flex">
 						<section class="catalog-filters">
+							<div class="catalog-filters__header">
+								Фильтры
+								<button class="catalog-filters__close">
+									<img src="img/svg/close.svg" alt="" />
+								</button>
+							</div>
+
 							<div class="catalog-filters__filter">
 								<div class="catalog-filters__title">Розничная цена</div>
 								<div class="catalog-filters__range">
@@ -2196,7 +2203,7 @@
 									</label>
 								</div>
 							</div>
-							<div class="catalog-filters__filter">
+							<div class="catalog-filters__filter catalog-filters__filter-2">
 								<div class="catalog-filters__title">Дополнительные свойства</div>
 								<div class="catalog-filters__checkboxes">
 									<label class="catalog-filters__checkbox">
@@ -2245,51 +2252,26 @@
 							</section>
 						</section>
 
+						<button class="catalog-filter-trigger">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M4 21V14" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M4 10V3" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M12 21V12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M12 8V3" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M20 21V16" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M20 12V3" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M1 14H7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M9 8H15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M17 16H23" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+							Фильтры
+						</button>
+
 						<section class="catalog-products">
 							<div class="catalog-products__grid">
 								<div class="product">
 									<div class="product__header">
-										<swiper-container class="product-swiper" pagination pagination-clickable>
-											<swiper-slide>
-												<img src="img/pictures/product-3.png" alt="" />
-											</swiper-slide>
-											<swiper-slide>
-												<img src="img/pictures/product-3.png" alt="" />
-											</swiper-slide>
-											<swiper-slide>
-												<img src="img/pictures/product-3.png" alt="" />
-											</swiper-slide>
-										</swiper-container>
-										<div class="product__bonus">
-											<div class="product__action">Акция</div>
-											<div class="product__daily">Товар дня</div>
-											<div class="product__new">Новинка</div>
-										</div>
-									</div>
-									<div class="product__body">
-										<div class="product__name">
-											Сироп RICHEZA Соленая карамель, стекло, (1 х1л) кор х6шт
-										</div>
-										<div class="product__bottom">
-											<div class="product__price">
-												8 851 ₽
-												<span class="product__price-old">8 851 ₽</span>
-											</div>
-											<div class="product__count">за 1 упак</div>
-											<div class="product__right">
-												<div class="product__pagination"></div>
-												<div class="product__available">
-													<span>В наличии</span>
-													<span>18 шт</span>
-												</div>
-											</div>
-										</div>
-										<button class="primary-button product__button">В корзину</button>
-									</div>
-								</div>
-								<div class="product">
-									<div class="product__header">
-										<swiper-container class="product-swiper" pagination pagination-clickable>
+										<swiper-container class="product-swiper" pagination pagination-clickable init="false">
 											<swiper-slide>
 												<img src="img/pictures/product-3.png" alt="" />
 											</swiper-slide>
@@ -2329,7 +2311,7 @@
 								</div>
 								<div class="product">
 									<div class="product__header">
-										<swiper-container class="product-swiper" pagination pagination-clickable>
+										<swiper-container class="product-swiper" pagination pagination-clickable init="false">
 											<swiper-slide>
 												<img src="img/pictures/product-3.png" alt="" />
 											</swiper-slide>
@@ -2369,7 +2351,7 @@
 								</div>
 								<div class="product">
 									<div class="product__header">
-										<swiper-container class="product-swiper" pagination pagination-clickable>
+										<swiper-container class="product-swiper" pagination pagination-clickable init="false">
 											<swiper-slide>
 												<img src="img/pictures/product-3.png" alt="" />
 											</swiper-slide>
@@ -2409,7 +2391,7 @@
 								</div>
 								<div class="product">
 									<div class="product__header">
-										<swiper-container class="product-swiper" pagination pagination-clickable>
+										<swiper-container class="product-swiper" pagination pagination-clickable init="false">
 											<swiper-slide>
 												<img src="img/pictures/product-3.png" alt="" />
 											</swiper-slide>
@@ -2449,7 +2431,7 @@
 								</div>
 								<div class="product">
 									<div class="product__header">
-										<swiper-container class="product-swiper" pagination pagination-clickable>
+										<swiper-container class="product-swiper" pagination pagination-clickable init="false">
 											<swiper-slide>
 												<img src="img/pictures/product-3.png" alt="" />
 											</swiper-slide>
@@ -2489,7 +2471,7 @@
 								</div>
 								<div class="product">
 									<div class="product__header">
-										<swiper-container class="product-swiper" pagination pagination-clickable>
+										<swiper-container class="product-swiper" pagination pagination-clickable init="false">
 											<swiper-slide>
 												<img src="img/pictures/product-3.png" alt="" />
 											</swiper-slide>
@@ -2529,7 +2511,7 @@
 								</div>
 								<div class="product">
 									<div class="product__header">
-										<swiper-container class="product-swiper" pagination pagination-clickable>
+										<swiper-container class="product-swiper" pagination pagination-clickable init="false">
 											<swiper-slide>
 												<img src="img/pictures/product-3.png" alt="" />
 											</swiper-slide>
@@ -2569,7 +2551,7 @@
 								</div>
 								<div class="product">
 									<div class="product__header">
-										<swiper-container class="product-swiper" pagination pagination-clickable>
+										<swiper-container class="product-swiper" pagination pagination-clickable init="false">
 											<swiper-slide>
 												<img src="img/pictures/product-3.png" alt="" />
 											</swiper-slide>
@@ -2609,7 +2591,7 @@
 								</div>
 								<div class="product">
 									<div class="product__header">
-										<swiper-container class="product-swiper" pagination pagination-clickable>
+										<swiper-container class="product-swiper" pagination pagination-clickable init="false">
 											<swiper-slide>
 												<img src="img/pictures/product-3.png" alt="" />
 											</swiper-slide>
@@ -2649,7 +2631,7 @@
 								</div>
 								<div class="product">
 									<div class="product__header">
-										<swiper-container class="product-swiper" pagination pagination-clickable>
+										<swiper-container class="product-swiper" pagination pagination-clickable init="false">
 											<swiper-slide>
 												<img src="img/pictures/product-3.png" alt="" />
 											</swiper-slide>
@@ -2689,7 +2671,7 @@
 								</div>
 								<div class="product">
 									<div class="product__header">
-										<swiper-container class="product-swiper" pagination pagination-clickable>
+										<swiper-container class="product-swiper" pagination pagination-clickable init="false">
 											<swiper-slide>
 												<img src="img/pictures/product-3.png" alt="" />
 											</swiper-slide>
@@ -2729,7 +2711,7 @@
 								</div>
 								<div class="product">
 									<div class="product__header">
-										<swiper-container class="product-swiper" pagination pagination-clickable>
+										<swiper-container class="product-swiper" pagination pagination-clickable init="false">
 											<swiper-slide>
 												<img src="img/pictures/product-3.png" alt="" />
 											</swiper-slide>
@@ -2769,7 +2751,7 @@
 								</div>
 								<div class="product">
 									<div class="product__header">
-										<swiper-container class="product-swiper" pagination pagination-clickable>
+										<swiper-container class="product-swiper" pagination pagination-clickable init="false">
 											<swiper-slide>
 												<img src="img/pictures/product-3.png" alt="" />
 											</swiper-slide>
@@ -2809,7 +2791,7 @@
 								</div>
 								<div class="product">
 									<div class="product__header">
-										<swiper-container class="product-swiper" pagination pagination-clickable>
+										<swiper-container class="product-swiper" pagination pagination-clickable init="false">
 											<swiper-slide>
 												<img src="img/pictures/product-3.png" alt="" />
 											</swiper-slide>
@@ -2849,7 +2831,47 @@
 								</div>
 								<div class="product">
 									<div class="product__header">
-										<swiper-container class="product-swiper" pagination pagination-clickable>
+										<swiper-container class="product-swiper" pagination pagination-clickable init="false">
+											<swiper-slide>
+												<img src="img/pictures/product-3.png" alt="" />
+											</swiper-slide>
+											<swiper-slide>
+												<img src="img/pictures/product-3.png" alt="" />
+											</swiper-slide>
+											<swiper-slide>
+												<img src="img/pictures/product-3.png" alt="" />
+											</swiper-slide>
+										</swiper-container>
+										<div class="product__bonus">
+											<div class="product__action">Акция</div>
+											<div class="product__daily">Товар дня</div>
+											<div class="product__new">Новинка</div>
+										</div>
+									</div>
+									<div class="product__body">
+										<div class="product__name">
+											Сироп RICHEZA Соленая карамель, стекло, (1 х1л) кор х6шт
+										</div>
+										<div class="product__bottom">
+											<div class="product__price">
+												851 ₽
+												<span class="product__price-old">851 ₽</span>
+											</div>
+											<div class="product__count">за 1 упак</div>
+											<div class="product__right">
+												<div class="product__pagination"></div>
+												<div class="product__available">
+													<span>В наличии</span>
+													<span>18 шт</span>
+												</div>
+											</div>
+										</div>
+										<button class="primary-button product__button">В корзину</button>
+									</div>
+								</div>
+								<div class="product">
+									<div class="product__header">
+										<swiper-container class="product-swiper" pagination pagination-clickable init="false">
 											<swiper-slide>
 												<img src="img/pictures/product-3.png" alt="" />
 											</swiper-slide>
@@ -2894,6 +2916,16 @@
 								<button class="catalog-products__show-more">Показать еще</button>
 							</div>
 						</section>
+					</div>
+				</div>
+			</section>
+
+			<section class="banner">
+				<div class="container">
+					<div class="banner__body">
+						<div class="banner__title">Есть вопросы?</div>
+						<div class="banner__text">Оставьте контакты и мы перезвоним вам!</div>
+						<button class="banner__button">Заказать обратный звонок</button>
 					</div>
 				</div>
 			</section>
@@ -2975,6 +3007,7 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 	<script src="js/modal.js"></script>
+	<script src="js/products.js"></script>
 
 	<script src="js/header.js"></script>
 	<script src="js/catalog.js"></script>
