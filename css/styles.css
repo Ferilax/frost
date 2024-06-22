@@ -3413,6 +3413,14 @@ h1, h2, h3, h4, h5, h6 {
     flex: 0 0 auto;
   }
 }
+@media (max-width: 600px) {
+  .catalog-banner {
+    margin-top: 32px;
+    flex-direction: column;
+    gap: 24px;
+    align-items: start;
+  }
+}
 
 .catalog-products__grid {
   align-self: start;

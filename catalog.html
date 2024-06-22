@@ -2149,7 +2149,8 @@
 						ниже!</div>
 					<div class="catalog-content__text">
 						Хотите узнать как стать профессиональным клиентом?
-						<span class="catalog-content__call">Позвоните нам <a href="tel:+78007002019" class="catalog-content__tel">8-800-700-2019</a></span>
+						<span class="catalog-content__call">Позвоните нам <a href="tel:+78007002019"
+								class="catalog-content__tel">8-800-700-2019</a></span>
 					</div>
 
 					<div class="catalog-content__flex">
@@ -2248,7 +2249,7 @@
 
 							<section class="catalog-banner">
 								<div class="catalog-banner__title">Помощь менеджера в подборе продукта или составлении меню</div>
-								<button class="catalog-banner__button">Получить помощь</button>
+								<button id="modal-application-manager-trigger" class="catalog-banner__button">Получить помощь</button>
 							</section>
 						</section>
 
@@ -2929,6 +2930,100 @@
 					</div>
 				</div>
 			</section>
+
+			<!-- МОДАЛКА: ПОМОЩЬ МЕНЕДЖЕРА -->
+			<div id="modal-application-manager" class="modal-application">
+				<div class="container">
+					<div class="modal-application__body m-body">
+						<div class="modal-application__header">
+							<div class="modal-application__title">
+								Помощь менеджера
+							</div>
+							<button class="m-close">
+								<img src="img/svg/close.svg" alt="" />
+							</button>
+						</div>
+
+						<form class="modal-application__form" action="#">
+							<div class="modal-application__item">
+								<div class="modal-application__label">Ф.И.О *</div>
+								<input class="modal-application__input" type="text" required placeholder="Ф.И.О *" />
+							</div>
+
+							<div class="modal-application__item">
+								<div class="modal-application__label">Номер телефона *</div>
+								<input class="modal-application__input" type="tel" required placeholder="Номер телефона *" />
+							</div>
+
+							<div class="modal-application__item">
+								<div class="modal-application__label">Название заведения *</div>
+								<input class="modal-application__input" type="text" required placeholder="Название заведения *" />
+							</div>
+
+							<div class="modal-application__item">
+								<div class="modal-application__label">E-mail *</div>
+								<input class="modal-application__input" type="email" required placeholder="E-mail *" />
+							</div>
+
+							<div class="modal-application__item modal-application__select-container">
+								<div class="modal-application__label">Выберите тему</div>
+								<!-- ВЫБОР ТЕМЫ -->
+								<select>
+									<option value="">Выберите тему</option>
+									<option value="1">Тема 1</option>
+									<option value="2">Тема 2</option>
+									<option value="3">Тема 3</option>
+									<option value="4">Тема 4</option>
+									<option value="5">Тема 5</option>
+									<option value="6">Тема 6</option>
+									<option value="7">Тема 7</option>
+									<option value="8">Тема 8</option>
+									<option value="9">Тема 9</option>
+									<option value="10">Тема 10</option>
+								</select>
+							</div>
+
+							<div class="modal-application__subtitle">Выберите удобный день и время</div>
+
+							<div class="modal-application__item">
+								<div class="modal-application__label">Выберите удобный день</div>
+								<!-- ВЫБОР ДАТЫ -->
+								<div class="modal-application__datepicker-container">
+									<input class="modal-application__input" type="text" placeholder="Выберите удобный день"
+										id="modal-application-manager-datepicker">
+								</div>
+							</div>
+
+							<div class="modal-application__item">
+								<div class="modal-application__label">Выберите удобное время</div>
+								<!-- ВЫБОР ВРЕМЕНИ -->
+								<select>
+									<option value="">Выберите удобное время</option>
+									<option value="8:00">8:00</option>
+									<option value="9:00">9:00</option>
+									<option value="10:00">10:00</option>
+									<option value="11:00">11:00</option>
+									<option value="12:00">12:00</option>
+									<option value="13:00">13:00</option>
+									<option value="14:00">14:00</option>
+									<option value="15:00">15:00</option>
+								</select>
+							</div>
+
+							<div class="modal-application__privacy-policy">
+								<label class="modal-application__policy-checkbox">
+									<input type="checkbox" required />
+									<span></span>
+								</label>
+
+								<span class="modal-application__policy-text">Соглашаюсь с политикой в отношении <a href="#">персональных
+										данных</a></span>
+								<button class="modal-application__submit">Отправить</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
 
 		</main>
 

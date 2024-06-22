@@ -411,6 +411,13 @@
 			flex: 0 0 auto;
 		}
 	}
+
+	@media (max-width: 600px) {
+		margin-top: 32px;
+		flex-direction: column;
+		gap: 24px;
+		align-items: start;
+	}
 }
 
 // ПРОДУКТЫ -------------------------------------------------------------------------------
