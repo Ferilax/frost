@@ -103,7 +103,7 @@ partnerSwiper2.initialize();
 // Фильтры продуктов ----------------------
 const productsFilters = document.querySelector(".products__filters");
 
-productsFilters.addEventListener("click", function(e) {
+productsFilters.addEventListener("click", function (e) {
 	clickedFilter = e.target.closest(".products__filter");
 
 	this.querySelectorAll(".products__filter").forEach(el => {
@@ -120,3 +120,13 @@ const productionShowHide = document.querySelector(".production__show");
 productionShowHide.addEventListener("click", () => {
 	production.classList.toggle("show")
 });
+
+// Селекты ------------------------
+const selects = document.querySelectorAll("select");
+
+selects?.forEach(el => {
+	new Choices(el, {
+		searchEnabled: false,
+		itemSelectText: "",
+	});
+})

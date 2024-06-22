@@ -19,8 +19,10 @@ function setModal(modal, trigger) {
 	modal?.addEventListener("click", e => {
 		const closeButton = e.target.closest(".m-close");
 		const modalBody = e.target.closest(".m-body");
+		const datepicker = e.target.closest(".datepicker-view");
 
-		if (closeButton || !modalBody) {
+
+		if (closeButton || !modalBody && !datepicker) {
 			modal.classList.remove("open");
 			body.classList.remove("lock");
 			document.removeEventListener("keydown", preventTab);
@@ -37,4 +39,12 @@ function setModal(modal, trigger) {
 const headerModal = document.querySelector(".modal-header");
 const headerModalTrigger = document.getElementById("header-search");
 
+const applicationProductsModal = document.getElementById("modal-application-product");
+const applicationProductsModalTrigger = document.getElementById("modal-application-trigger");
+
+const applicationManagerModal = document.getElementById("modal-application-manager");
+const applicationManagerModalTrigger = document.getElementById("modal-application-manager-trigger");
+
 setModal(headerModal, headerModalTrigger);
+setModal(applicationProductsModal, applicationProductsModalTrigger);
+setModal(applicationManagerModal, applicationManagerModalTrigger);

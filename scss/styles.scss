@@ -7,13 +7,15 @@
 @import "templates";
 
 @import "components/buttons";
-@import "components/fonts";
 @import "components/product";
+@import "components/breadcrumbs";
 @import "header";
 @import "footer";
 
 @import "modals";
 @import "pages/main";
+@import "pages/contacts";
+@import "pages/catalog";
 
 html {
 	scroll-behavior: smooth;
@@ -39,6 +41,16 @@ svg {
 body.lock {
 	overflow: hidden;
 }
+
+main {
+	margin-top: 100px;
+
+	@media screen and (max-width: 420px) {
+		margin-top: 88px;
+	}
+}
+
+// ---------------------------------------------
 
 .container {
 	max-width: 1920px;
@@ -137,6 +149,289 @@ swiper-container {
 
 		&:disabled {
 			background: $grey;
+		}
+	}
+}
+
+.choices {
+	&:hover {
+		.choices__inner {
+			border: 1px solid $primary;
+		}
+
+		&::after {
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M6 9L12 15L18 9' stroke='%23116565' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+		}
+	}
+
+	&.is-open {
+		.choices__inner {
+			border-radius: 10px 10px 0 0;
+			min-height: 52px;
+			padding: 0 !important;
+
+			display: flex;
+			align-items: center;
+			background: white;
+			border: 1px solid $black;
+		}
+
+		.choices__item {
+			color: $black;
+		}
+
+		&::after {
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M6 9L12 15L18 9' stroke='%23262626' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+		}
+
+		.choices__list--dropdown {
+			opacity: 1;
+			margin: 0;
+			border: 1px solid $black;
+			border-top: none;
+			border-radius: 0 0 10px 10px;
+			background: white;
+			padding: 14px 18px;
+		}
+	}
+
+	&::after {
+		transition: 0.2s;
+		border: none !important;
+		width: 24px !important;
+		height: 24px !important;
+		margin: 0 !important;
+		right: 18px !important;
+		transform: translateY(-50%);
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M6 9L12 15L18 9' stroke='%23878787' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+	}
+
+	.choices__inner {
+		border-radius: 10px;
+		min-height: 52px;
+		padding: 0 !important;
+		transition: 0.2s;
+
+		display: flex;
+		align-items: center;
+		border: 1px solid $grey2;
+		background: white;
+	}
+
+	.choices__item {
+		text-align: left;
+		opacity: 1;
+		padding: 0 52px 0 18px;
+		font-family: inherit;
+		font-size: 14px;
+	}
+
+	.choices__item.is-highlighted.choices__item--choice {
+		background: none;
+		color: $primary;
+	}
+
+	.choices__item--choice.choices__item {
+		padding: 6px 34px 6px 0;
+		font-size: 14px;
+
+		&:first-child {
+			padding: 0 34px 6px 0;
+		}
+
+		&:last-child {
+			padding: 6px 34px 0 0;
+		}
+	}
+
+	.choices__list {
+		border: none;
+		padding: 0;
+	}
+
+	.choices__list--dropdown {
+		.choices__list {
+			max-height: 103px;
+		}
+	}
+
+	// ----------------
+
+	*::-webkit-scrollbar {
+		height: 2px;
+		width: 2px;
+	}
+
+	*::-webkit-scrollbar-track {
+		border-radius: 0px;
+		background-color: #D2D2D2;
+	}
+
+	*::-webkit-scrollbar-track:hover {
+		background-color: #D2D2D2;
+	}
+
+	*::-webkit-scrollbar-track:active {
+		background-color: #D2D2D2;
+	}
+
+	*::-webkit-scrollbar-thumb {
+		border-radius: 0px;
+		background-color: #262626;
+	}
+
+	*::-webkit-scrollbar-thumb:hover {
+		background-color: #262626;
+	}
+
+	*::-webkit-scrollbar-thumb:active {
+		background-color: #262626;
+	}
+
+}
+
+// -----------------------------------------------------------------------
+
+.datepicker {
+	transform: translateY(-1px);
+	width: 100%;
+	background: white;
+
+	border: 1px solid $black;
+	border-radius: 0 0 10px 10px;
+	box-shadow: none;
+
+	display: flex;
+	justify-content: center;
+
+	font-family: inherit;
+	font-size: 14px;
+	padding: 14px 0 !important;
+
+	&.datepicker-orient-top {
+		border: 1px solid $black;
+		border-radius: 10px;
+	}
+
+	.datepicker-picker {
+		box-shadow: none;
+		border: none;
+		border-radius: 0;
+
+		gap: 10px;
+
+		width: 268px;
+	}
+
+	.datepicker-main {
+		border: none;
+		padding: 0;
+	}
+
+	.datepicker-footer {
+		display: none;
+	}
+
+	.datepicker-view {
+		width: 100%;
+	}
+
+	.datepicker-grid {
+		display: grid;
+		gap: 12px;
+		grid-template-columns: repeat(7, 1fr);
+	}
+
+	.datepicker-cell {
+		height: auto;
+		aspect-ratio: 1;
+
+		&:hover {
+			background: #EAEAEA;
+		}
+	}
+
+	.datepicker-cell.selected {
+		background: $primary;
+		color: white;
+		font-weight: 400;
+	}
+
+	.day.next {
+		color: $grey2;
+	}
+
+	.days {
+		gap: 10px;
+	}
+
+	.days-of-week {
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		gap: 10px;
+
+		color: $grey2;
+	}
+
+	.dow {
+		font-size: inherit;
+	}
+
+	.view-switch {
+		order: 1;
+		margin-right: 10px;
+
+		font-size: inherit;
+		font-weight: 700;
+	}
+
+	.prev-button {
+		order: 2;
+	}
+
+	.next-button {
+		order: 3;
+	}
+
+	.datepicker-controls {
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+
+		.button {
+			padding: 0;
+			height: auto;
+			flex: 0 1 auto;
+
+			&:hover {
+				background: #EAEAEA;
+			}
+		}
+	}
+
+	.datepicker-cell.focused:not(.selected) {
+		background-color: $grey;
+	}
+
+	.datepicker-grid.months {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.datepicker-grid.years {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.datepicker-grid.decades {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	@include sm-d {
+		position: relative;
+		top: 0 !important;
+		left: 0 !important;
+
+		&.datepicker-orient-top {
+			border-radius: 0 0 10px 10px;
 		}
 	}
 }

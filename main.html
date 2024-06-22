@@ -4,6 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/css/datepicker.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css" />
 	<link rel="stylesheet" href="css/styles.css">
 	<title>Главная</title>
 </head>
@@ -15,7 +17,7 @@
 				<div class="header__row">
 
 					<!-- ЛОГОТИП -->
-					<a href="#" class="header__logo">
+					<a href="main.html" class="header__logo">
 						<img src="img/svg/logo.svg" alt="" />
 
 						<span class="logo__text">
@@ -49,7 +51,7 @@
 						<a href="#" class="header__link">Доставка и оплата</a>
 						<a href="#" class="header__link">Партнерство</a>
 						<a href="#" class="header__link">Мероприятия</a>
-						<a href="#" class="header__link">Контакты</a>
+						<a href="contacts.html" class="header__link">Контакты</a>
 					</nav>
 
 					<!-- ТЕЛЕФОН -->
@@ -1079,7 +1081,7 @@
 								<span>Хлебобулочные изделия</span>
 							</a>
 
-							<button class="dropdown__button_small">В каталог</button>
+							<a href="catalog.html" class="dropdown__button_small">В каталог</a>
 
 							<a href="tel:+78007002019" class="dropdown__tel">8-800-700-2019</a>
 
@@ -1097,39 +1099,39 @@
 							</div>
 
 						</div>
-						<button class="dropdown__button">В каталог</button>
+						<a href="catalog.html" class="dropdown__button">В каталог</a>
 					</div>
 
 				</div>
 			</div>
 
-			<!-- Модальное окно -->
-			<div class="modal-header">
-				<div class="container">
-					<div class="modal-header__body m-body">
-						<div class="modal-header__header">
-							<div class="modal-header__title">Поиск по сайту</div>
-							<button>
-								<img src="img/svg/close.svg" alt="" />
-							</button>
-						</div>
-
-						<div class="modal-header__search">
-							<input type="text" placeholder="Введите запрос" />
-							<button class="m-close">
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
-										stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M21.9999 22L19.4999 19.5" stroke="black" stroke-width="2" stroke-linecap="round"
-										stroke-linejoin="round" />
-								</svg>
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
 		</header>
+		<!-- МОДАЛКА: ХЕДЕР -->
+		<div class="modal-header">
+			<div class="container">
+				<div class="modal-header__body m-body">
+					<div class="modal-header__header">
+						<div class="modal-header__title">Поиск по сайту</div>
+						<button class="m-close">
+							<img src="img/svg/close.svg" alt="" />
+						</button>
+					</div>
+
+					<div class="modal-header__search">
+						<input type="text" placeholder="Введите запрос" />
+						<button class="m-close">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+									stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M21.9999 22L19.4999 19.5" stroke="black" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<main class="main">
 
@@ -3137,7 +3139,7 @@
 						<div class="advantages__item">
 							<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
 								<path
-									d="M21.5435 29.4861C21.1013 29.4861 20.6837 29.4038 20.2907 29.2392C19.8976 29.0745 19.5557 28.8412 19.2651 28.5394C19.1499 28.4181 19.0477 28.288 18.9583 28.149C18.7358 27.8029 18.9798 27.3824 19.3836 27.2778Lnan nanL19.3836 27.2778C19.7692 27.178 20.1479 27.4214 20.4233 27.7039C20.4869 27.7691 20.5573 27.8281 20.6346 27.8808C20.9089 28.0611 21.2098 28.1493 21.5373 28.1454C21.828 28.1454 22.088 28.0807 22.3173 27.9513C22.5466 27.8219 22.7267 27.6475 22.8577 27.428C22.9887 27.2045 23.0543 26.9555 23.0543 26.6811C23.0543 26.2616 22.913 25.9108 22.6305 25.6285C22.348 25.3462 21.9836 25.2051 21.5373 25.2051C21.4022 25.2051 21.2692 25.2228 21.1382 25.258L-nan -nanL21.1382 25.258C20.9239 25.3176 20.68 25.2568 20.5666 25.0691L20.4112 24.8121C20.2284 24.5098 20.2962 24.1222 20.5715 23.8968L22.925 21.9691C22.994 21.9126 23.0994 21.94 23.1306 22.0226C23.1621 22.1058 23.0992 22.1943 23.0085 22.1943H19.6703C19.2939 22.1943 18.9887 21.8955 18.9887 21.5268C18.9887 21.1582 19.2939 20.8594 19.6703 20.8594H23.4556C23.9835 20.8594 24.4115 21.2785 24.4115 21.7954C24.4115 22.0537 24.3025 22.3005 24.1103 22.4774L22.2304 24.2081C22.1498 24.2823 22.0175 24.2285 22.0143 24.1202C22.0121 24.0461 22.0757 23.986 22.1509 23.9939C22.6269 24.0435 23.0365 24.1826 23.3797 24.4112C23.7605 24.6621 24.0512 24.9856 24.2518 25.3815C24.4565 25.7775 24.5589 26.2107 24.5589 26.6811C24.5589 27.2143 24.4217 27.6926 24.1474 28.116C23.8772 28.5394 23.5128 28.8746 23.0543 29.1215C22.5998 29.3646 22.0962 29.4861 21.5435 29.4861Z"
+									d="M21.5435 29.4861C21.1013 29.4861 20.6837 29.4038 20.2907 29.2392C19.8976 29.0745 19.5557 28.8412 19.2651 28.5394C19.1499 28.4181 19.0477 28.288 18.9583 28.149C18.7358 27.8029 18.9798 27.3824 19.3836 27.2778L19.5 19.5L19.3836 27.2778C19.7692 27.178 20.1479 27.4214 20.4233 27.7039C20.4869 27.7691 20.5573 27.8281 20.6346 27.8808C20.9089 28.0611 21.2098 28.1493 21.5373 28.1454C21.828 28.1454 22.088 28.0807 22.3173 27.9513C22.5466 27.8219 22.7267 27.6475 22.8577 27.428C22.9887 27.2045 23.0543 26.9555 23.0543 26.6811C23.0543 26.2616 22.913 25.9108 22.6305 25.6285C22.348 25.3462 21.9836 25.2051 21.5373 25.2051C21.4022 25.2051 21.2692 25.2228 21.1382 25.258L21.0 21.0L21.1382 25.258C20.9239 25.3176 20.68 25.2568 20.5666 25.0691L20.4112 24.8121C20.2284 24.5098 20.2962 24.1222 20.5715 23.8968L22.925 21.9691C22.994 21.9126 23.0994 21.94 23.1306 22.0226C23.1621 22.1058 23.0992 22.1943 23.0085 22.1943H19.6703C19.2939 22.1943 18.9887 21.8955 18.9887 21.5268C18.9887 21.1582 19.2939 20.8594 19.6703 20.8594H23.4556C23.9835 20.8594 24.4115 21.2785 24.4115 21.7954C24.4115 22.0537 24.3025 22.3005 24.1103 22.4774L22.2304 24.2081C22.1498 24.2823 22.0175 24.2285 22.0143 24.1202C22.0121 24.0461 22.0757 23.986 22.1509 23.9939C22.6269 24.0435 23.0365 24.1826 23.3797 24.4112C23.7605 24.6621 24.0512 24.9856 24.2518 25.3815C24.4565 25.7775 24.5589 26.2107 24.5589 26.6811C24.5589 27.2143 24.4217 27.6926 24.1474 28.116C23.8772 28.5394 23.5128 28.8746 23.0543 29.1215C22.5998 29.3646 22.0962 29.4861 21.5435 29.4861Z"
 									fill="#262626" />
 								<path
 									d="M29.3314 29.5038C28.7049 29.5038 28.1522 29.3764 27.6732 29.1215C27.1942 28.8628 26.8196 28.5041 26.5493 28.0454C26.2832 27.5867 26.1502 27.0575 26.1502 26.4577V23.7291C26.1502 23.1293 26.2832 22.6 26.5493 22.1414C26.8196 21.6827 27.1942 21.3259 27.6732 21.0711C28.1522 20.8124 28.7049 20.683 29.3314 20.683C29.9578 20.683 30.5084 20.8124 30.9834 21.0711C31.4624 21.3259 31.837 21.6827 32.1072 22.1414C32.3775 22.6 32.5126 23.1293 32.5126 23.7291V26.4577C32.5126 27.0575 32.3775 27.5867 32.1072 28.0454C31.837 28.5041 31.4624 28.8628 30.9834 29.1215C30.5084 29.3764 29.9578 29.5038 29.3314 29.5038ZM29.3314 28.1571C29.6425 28.1571 29.925 28.0866 30.1789 27.9454C30.4327 27.8004 30.6333 27.6083 30.7807 27.3691C30.9281 27.1261 31.0018 26.8556 31.0018 26.5576V23.6232C31.0018 23.3214 30.9281 23.0509 30.7807 22.8117C30.6333 22.5687 30.4327 22.3766 30.1789 22.2354C29.925 22.0904 29.6425 22.0179 29.3314 22.0179C29.0202 22.0179 28.7377 22.0904 28.4839 22.2354C28.23 22.3766 28.0294 22.5687 27.882 22.8117C27.7346 23.0509 27.6609 23.3214 27.6609 23.6232V26.5576C27.6609 26.8556 27.7346 27.1261 27.882 27.3691C28.0294 27.6083 28.23 27.8004 28.4839 27.9454C28.7377 28.0866 29.0202 28.1571 29.3314 28.1571Z"
@@ -3383,7 +3385,7 @@
 								работаем, технологиям приготовления, наиболее выгодному применении продуктов на кухне
 							</div>
 						</div>
-						<button class="help__button white-button">Получить помощь</button>
+						<button id="modal-application-manager-trigger" class="help__button white-button">Получить помощь</button>
 					</div>
 				</div>
 			</section>
@@ -3502,7 +3504,7 @@
 								Мы следим за всеми трендами ресторанного рынка, стараемся одними из первых привозить новые продукты,
 								чтобы наши клиенты могли создавать современные, модные, актуальные меню
 							</div>
-							<button class="application-product__button primary-button">Оформить заявку</button>
+							<button id="modal-application-trigger" class="application-product__button primary-button">Оформить заявку</button>
 						</div>
 
 						<div class="application-product__img"></div>
@@ -3511,6 +3513,148 @@
 			</section>
 
 		</main>
+
+		<!-- МОДАЛКА: ПОМОЩЬ МЕНЕДЖЕРА -->
+		<div id="modal-application-manager" class="modal-application">
+			<div class="container">
+				<div class="modal-application__body m-body">
+					<div class="modal-application__header">
+						<div class="modal-application__title">
+							Помощь менеджера
+						</div>
+						<button class="m-close">
+							<img src="img/svg/close.svg" alt="" />
+						</button>
+					</div>
+
+					<form class="modal-application__form" action="#">
+						<div class="modal-application__item">
+							<div class="modal-application__label">Ф.И.О *</div>
+							<input class="modal-application__input" type="text" required placeholder="Ф.И.О *" />
+						</div>
+
+						<div class="modal-application__item">
+							<div class="modal-application__label">Номер телефона *</div>
+							<input class="modal-application__input" type="tel" required placeholder="Номер телефона *" />
+						</div>
+
+						<div class="modal-application__item">
+							<div class="modal-application__label">Название заведения *</div>
+							<input class="modal-application__input" type="text" required placeholder="Название заведения *" />
+						</div>
+
+						<div class="modal-application__item">
+							<div class="modal-application__label">E-mail *</div>
+							<input class="modal-application__input" type="email" required placeholder="E-mail *" />
+						</div>
+
+						<div class="modal-application__item modal-application__select-container">
+							<div class="modal-application__label">Выберите тему</div>
+							<!-- ВЫБОР ТЕМЫ -->
+							<select>
+								<option value="">Выберите тему</option>
+								<option value="1">Тема 1</option>
+								<option value="2">Тема 2</option>
+								<option value="3">Тема 3</option>
+								<option value="4">Тема 4</option>
+								<option value="5">Тема 5</option>
+								<option value="6">Тема 6</option>
+								<option value="7">Тема 7</option>
+								<option value="8">Тема 8</option>
+								<option value="9">Тема 9</option>
+								<option value="10">Тема 10</option>
+							</select>
+						</div>
+
+						<div class="modal-application__subtitle">Выберите удобный день и время</div>
+
+						<div class="modal-application__item">
+							<div class="modal-application__label">Выберите удобный день</div>
+							<!-- ВЫБОР ДАТЫ -->
+							<div class="modal-application__datepicker-container">
+								<input class="modal-application__input" type="text" placeholder="Выберите удобный день" id="modal-application-manager-datepicker">
+							</div>
+						</div>
+
+						<div class="modal-application__item">
+							<div class="modal-application__label">Выберите удобное время</div>
+							<!-- ВЫБОР ВРЕМЕНИ -->
+							<select>
+								<option value="">Выберите удобное время</option>
+								<option value="8:00">8:00</option>
+								<option value="9:00">9:00</option>
+								<option value="10:00">10:00</option>
+								<option value="11:00">11:00</option>
+								<option value="12:00">12:00</option>
+								<option value="13:00">13:00</option>
+								<option value="14:00">14:00</option>
+								<option value="15:00">15:00</option>
+							</select>
+						</div>
+
+						<div class="modal-application__privacy-policy">
+							<label class="modal-application__policy-checkbox">
+								<input type="checkbox" required />
+								<span></span>
+							</label>
+
+							<span class="modal-application__policy-text">Соглашаюсь с политикой в отношении <a href="#">персональных
+									данных</a></span>
+							<button class="modal-application__submit">Отправить</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- МОДАЛКА: ПРОДУКТЫ -->
+		<div id="modal-application-product" class="modal-application modal-application-product">
+			<div class="container">
+				<div class="modal-application__body m-body">
+					<div class="modal-application__header">
+						<div class="modal-application__title">
+							Особые пожелания по продуктам?
+						</div>
+						<button class="m-close">
+							<img src="img/svg/close.svg" alt="" />
+						</button>
+					</div>
+
+					<form class="modal-application__form" action="#">
+						<div class="modal-application__item">
+							<div class="modal-application__label">Ф.И.О *</div>
+							<input class="modal-application__input" type="text" required placeholder="Ф.И.О *" />
+						</div>
+
+						<div class="modal-application__item">
+							<div class="modal-application__label">Номер телефона *</div>
+							<input class="modal-application__input" type="tel" required placeholder="Номер телефона *" />
+						</div>
+
+						<div class="modal-application__item">
+							<div class="modal-application__label">Название заведения *</div>
+							<input class="modal-application__input" type="text" required placeholder="Название заведения *" />
+						</div>
+
+						<div class="modal-application__item">
+							<div class="modal-application__label">Напишите какой продукт вас интересует</div>
+							<textarea class="modal-application__textarea" rows="4" placeholder="Напишите какой продукт вас интересует"></textarea>
+						</div>
+
+						<div class="modal-application__privacy-policy">
+							<label class="modal-application__policy-checkbox">
+								<input type="checkbox" required />
+								<span></span>
+							</label>
+
+							<span class="modal-application__policy-text">Соглашаюсь с политикой в отношении <a href="#">персональных
+									данных</a></span>
+							<button class="modal-application__submit">Отправить</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 
 		<footer class="footer">
 			<div class="container">
@@ -3526,12 +3670,12 @@
 
 					<!-- НАВИГАЦИЯ -->
 					<nav class="footer__nav">
-						<a href="#" class="footer__link">Каталог</a>
+						<a href="catalog.html" class="footer__link">Каталог</a>
 						<a href="#" class="footer__link">О компании</a>
 						<a href="#" class="footer__link">Доставка и оплата</a>
 						<a href="#" class="footer__link">Партнерство</a>
 						<a href="#" class="footer__link">Мероприятия</a>
-						<a href="#" class="footer__link">Контакты</a>
+						<a href="contacts.html" class="footer__link">Контакты</a>
 					</nav>
 
 					<!-- ССЫЛКИ, ИНФОРМАЦИЯ -->
@@ -3585,9 +3729,14 @@
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/js/datepicker.min.js"></script>
+
+	<script src="js/datepicker.js"></script>
+	<script src="js/modal.js"></script>
+
 	<script src="js/header.js"></script>
 	<script src="js/main.js"></script>
-	<script src="js/modal.js"></script>
 </body>
 
 </html>

@@ -143,43 +143,15 @@
 	padding: 60px 0;
 
 	&__item {
+		@extend %search;
 		margin: 0 40px;
-		border-radius: 10px;
-		border: 1px solid $primary;
-		overflow: hidden;
-		display: flex;
 	}
 
-	&__input {
-		padding: 0 20px;
+	& &__input {
 		font-size: 18px;
-		flex: 1 1 auto;
-		font-weight: 500;
-
-		&::placeholder {
-			color: $black;
-		}
 	}
 
 	&__button {
-		background: $primary;
-		flex: 0 0 60px;
-		height: 60px;
-		transition: 0.2s;
-
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		svg {
-			* {
-				stroke: $white;
-			}
-		}
-
-		&:hover {
-			background: $primary-hover;
-		}
 	}
 
 	@include lg-d {
@@ -190,7 +162,7 @@
 	@include md-d {
 		padding: 24px 0;
 
-		&__input {
+		& &__input {
 			font-size: 14px;
 		}
 	}

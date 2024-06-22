@@ -2,11 +2,11 @@ const catalogTrigger = document.querySelector(".header__catalog-trigger");
 const dropdown = document.querySelector(".header .dropdown");
 const closeButton = document.querySelector(".dropdown__close");
 
-window.addEventListener("resize", function (e) {
-	if (window.innerWidth >= 768) {
-		document.body.classList.remove("lock");
-	}
-})
+//window.addEventListener("resize", function (e) {
+//	if (window.innerWidth >= 768) {
+//		document.body.classList.remove("lock");
+//	}
+//})
 
 catalogTrigger.addEventListener("click", function (e) {
 	e.stopPropagation();
