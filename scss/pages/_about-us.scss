@@ -1,0 +1,107 @@
+.about-title{
+	@extend %h1;
+	margin-top: 32px;
+	margin-bottom: 60px;
+
+	@include md-d {
+		margin-top: 24px;
+	}
+}
+
+.about-label {
+	font-size: 40px;
+	font-weight: 700;
+}
+
+// КТО МЫ -------------------------------------------------------------------------------
+.who-we-are-section {
+	padding: 60px 0;
+
+	&__flex {
+		display: flex;
+		gap: 20px;
+		align-items: center;
+
+		&_item {
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+
+	&_text {
+		font-size: 14px;
+		margin-top: 28px;
+	}
+
+	&_staff_image {
+		object-fit: scale-down;
+	}
+}
+
+// МЫ ПОСТАВЛЯЕМ ПРОДУКЦИЮ -------------------------------------------------------------------------------
+.we-supply-section {
+	padding: 60px 0;
+
+	.about-label {
+		min-width: 280px;
+		width: 280px;
+	}
+
+	&__flex {
+		display: flex;
+		gap: 20px;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__items {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 24px;
+	}
+
+	&__item {
+		max-width: 160px;
+		font-size: 16px;
+		font-weight: 700;
+	}
+}
+
+// ИСТОРИЯ -------------------------------------------------------------------------------
+.history-section {
+	padding: 60px 0;
+
+	&__flex {
+		display: flex;
+		gap: 170px;
+		align-items: center;
+
+		&_item {
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+
+	&_text {
+		font-size: 14px;
+		margin-top: 28px;
+	}
+
+	&_staff_image {
+		object-fit: scale-down;
+	}
+
+	&_navigation {
+		margin-top: 60px;
+	}
+}
+
+.history-slider {
+
+}
