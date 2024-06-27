@@ -25,18 +25,14 @@ function initDatepicker(element) {
 		element.addEventListener('changeMonth', keepFirstWord);
 	}
 }
+// ----------------------------------------------------------------------------------------------
+const allDatepickers = document.querySelectorAll(".datepicker-component");
 
-
+allDatepickers.forEach(el => {
+	initDatepicker(el);
+})
 
 // ----------------------------------------------------------------------------------------------
-
-const modalManagerHelpDatepicker = document.getElementById("modal-application-manager-datepicker");
-
-initDatepicker(modalManagerHelpDatepicker);
-
-
-// ----------------------------------------------------------------------------------------------
-
 const titles = document.querySelectorAll(".datepicker-controls .view-switch");
 function keepFirstWord() {
 	titles.forEach(el => {

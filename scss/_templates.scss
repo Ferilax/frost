@@ -7,7 +7,6 @@
 	width: 100%;
 	height: 100%;
 	background: rgba($color: #262626, $alpha: 0.8);
-	text-align: center;
 	overflow-y: auto;
 	overflow-x: hidden;
 	transition: 0.2s;
@@ -219,31 +218,7 @@
 
 	background: $primary;
 	border-radius: 10px;
-	color: $white;
-	font-size: 14px;
-	transition: 0.2s;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	&:hover {
-		background: $primary-hover;
-	}
-
-	&:disabled {
-		background: $grey;
-		color: $grey2;
-	}
-}
-
-%primary-button-icon-text {
-	height: 60px;
-	padding: 0 32px;
-
-	background: $primary;
-	border-radius: 10px;
-	color: $white;
+	color: white;
 	font-size: 14px;
 	transition: 0.2s;
 
@@ -254,6 +229,10 @@
 
 	path {
 		stroke: $white;
+	}
+
+	&:visited {
+		color: white;
 	}
 
 	&:hover {
@@ -267,6 +246,62 @@
 		path {
 			stroke: $grey2;
 		}
+	}
+}
+
+%secondary-button {
+	height: 53px;
+	padding: 0 32px;
+
+	background: white;
+	border-radius: 10px;
+	border: 1px solid $primary;
+	color: $primary;
+	font-size: 14px;
+	transition: 0.2s;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&:visited {
+		color: $primary;
+	}
+
+	&:hover {
+		color: $primary-hover;
+		border: 1px solid $primary-hover;
+
+		path {
+			stroke: $primary-hover;
+		}
+	}
+
+
+	&:disabled {
+		color: $grey2;
+		border: 1px solid $grey2;
+
+		path {
+			stroke: $grey2;
+		}
+	}
+}
+
+%white-button {
+	background: white;
+	border-radius: 10px;
+	padding: 0 32px;
+	height: 50px;
+	color: $black;
+	font-size: 14px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&:visited {
+		color: $black;
 	}
 }
 

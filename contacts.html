@@ -26,7 +26,7 @@
 					</a>
 
 					<!-- МЕНЮ  -->
-					<button href="#" class="header__catalog-trigger">
+					<button class="header__catalog-trigger">
 						<svg class="catalog-trigger__burger" width="24" height="24" viewBox="0 0 24 24" fill="none"
 							xmlns="http://www.w3.org/2000/svg">
 							<path d="M3 12H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -47,10 +47,10 @@
 					<!-- НАВИГАЦИЯ -->
 					<nav class="header__nav">
 
-						<a href="#" class="header__link">О компании</a>
-						<a href="#" class="header__link">Доставка и оплата</a>
-						<a href="#" class="header__link">Партнерство</a>
-						<a href="#" class="header__link">Мероприятия</a>
+						<a href="about-us.html" class="header__link">О компании</a>
+						<a href="delivery.html" class="header__link">Доставка и оплата</a>
+						<a href="partnership.html" class="header__link">Партнерство</a>
+						<a href="events.html" class="header__link">Мероприятия</a>
 						<a href="contacts.html" class="header__link">Контакты</a>
 					</nav>
 
@@ -59,7 +59,7 @@
 
 					<!-- ДЕЙСТВИЯ -->
 					<div class="header__actions">
-						<a href="#" class="header__basket">
+						<a href="basket.html" class="header__basket">
 							<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M9 23C9.55228 23 10 22.5523 10 22C10 21.4477 9.55228 21 9 21C8.44772 21 8 21.4477 8 22C8 22.5523 8.44772 23 9 23Z"
@@ -1104,7 +1104,6 @@
 
 				</div>
 			</div>
-
 		</header>
 		<!-- МОДАЛКА: ХЕДЕР -->
 		<div class="modal-header">
@@ -1272,18 +1271,61 @@
 					<div class="banner__body">
 						<div class="banner__title">Есть вопросы?</div>
 						<div class="banner__text">Оставьте контакты и мы перезвоним вам!</div>
-						<button class="banner__button">Заказать обратный звонок</button>
+						<button class="banner__button" id="modal-application-question-trigger">Заказать обратный звонок</button>
 					</div>
 				</div>
 			</section>
 		</main>
 
+		<!-- МОДАЛКА: ВОПРОС -->
+		<div id="modal-application-question" class="modal-application modal-application-question">
+			<div class="container">
+				<div class="modal-application__body m-body">
+					<div class="modal-application__header">
+						<div class="modal-application__title">
+							Есть вопросы?
+						</div>
+						<button class="m-close">
+							<img src="img/svg/close.svg" alt="" />
+						</button>
+					</div>
+
+					<form class="modal-application__form" action="#">
+						<div class="modal-application__item">
+							<div class="modal-application__label">Ф.И.О *</div>
+							<input class="modal-application__input" type="text" required placeholder="Ф.И.О *" />
+						</div>
+
+						<div class="modal-application__item">
+							<div class="modal-application__label">Номер телефона *</div>
+							<input class="modal-application__input" type="tel" required placeholder="Номер телефона *" />
+						</div>
+
+						<div class="modal-application__item">
+							<div class="modal-application__label">E-mail *</div>
+							<input class="modal-application__input" type="email" required placeholder="E-mail *" />
+						</div>
+
+						<div class="modal-application__privacy-policy">
+							<label class="modal-application__policy-checkbox">
+								<input type="checkbox" required />
+								<span></span>
+							</label>
+
+							<span class="modal-application__policy-text">Соглашаюсь с политикой в отношении <a href="#">персональных
+									данных</a></span>
+							<button class="modal-application__submit">Заказать звонок</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 
 		<footer class="footer">
 			<div class="container">
 				<div class="footer__top">
 					<!-- ЛОГОТИП -->
-					<a href="#" class="footer__logo">
+					<a href="main.html" class="footer__logo">
 						<img src="img/svg/logo.svg" alt="" />
 
 						<div class="logo__text">
@@ -1294,10 +1336,10 @@
 					<!-- НАВИГАЦИЯ -->
 					<nav class="footer__nav">
 						<a href="catalog.html" class="footer__link">Каталог</a>
-						<a href="#" class="footer__link">О компании</a>
-						<a href="#" class="footer__link">Доставка и оплата</a>
-						<a href="#" class="footer__link">Партнерство</a>
-						<a href="#" class="footer__link">Мероприятия</a>
+						<a href="about-us.html" class="footer__link">О компании</a>
+						<a href="delivery.html" class="footer__link">Доставка и оплата</a>
+						<a href="partnership.html" class="footer__link">Партнерство</a>
+						<a href="events.html" class="footer__link">Мероприятия</a>
 						<a href="contacts.html" class="footer__link">Контакты</a>
 					</nav>
 

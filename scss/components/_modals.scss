@@ -123,6 +123,8 @@
 		@extend %primary-button;
 		margin-left: auto;
 		height: 50px;
+
+		flex: 0 0 auto;
 	}
 
 	&__policy-text {
@@ -212,5 +214,48 @@
 .modal-application-product {
 	.modal-application__body {
 		max-width: 750px;
+	}
+}
+
+.modal-application-question {
+	.modal-application__body {
+		max-width: 700px;
+	}
+
+	.modal-application__form {
+		grid-template-columns: 2fr 1.5fr;
+	}
+}
+
+.modal-add-basket {
+	.modal-application__body {
+		max-width: 424px;
+	}
+
+	&__text {
+		margin-top: 30px;
+
+		@include sm-d {
+			font-size: 14px;
+		}
+	}
+
+	&__buttons {
+		margin-top: auto;
+
+		display: flex;
+		gap: 26px;
+	}
+
+	&__resume {
+		margin-top: 30px;
+		flex: 1 1 204px;
+		@extend %primary-button;
+	}
+	
+	&__link {
+		margin-top: 30px;
+		flex: 0 0 133px;
+		@extend %secondary-button;
 	}
 }

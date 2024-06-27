@@ -6,17 +6,17 @@
 
 @import "templates";
 
-@import "components/buttons";
 @import "components/product";
 @import "components/breadcrumbs";
 @import "components/banners";
+@import "components/modals";
 @import "header";
 @import "footer";
 
-@import "modals";
 @import "pages/main";
 @import "pages/contacts";
 @import "pages/catalog";
+@import "pages/about-us";
 
 html {
 	scroll-behavior: smooth;

@@ -2,7 +2,7 @@
 	line-height: 1;
 	position: fixed;
 	width: 100%;
-	z-index: $z-header	;
+	z-index: $z-header;
 	top: 0;
 	left: 0;
 	background: white;
@@ -120,7 +120,13 @@
 	}
 
 	&__account {
+		@extend %primary-button;
+		height: 60px;
 		margin-left: 20px;
+
+		circle {
+			stroke: white;
+		}
 	}
 
 	//---------------------------------------------
@@ -297,7 +303,7 @@
 		&__row {
 			height: 88px;
 		}
-		
+
 		&__logo {
 
 			img,

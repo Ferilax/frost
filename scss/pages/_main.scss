@@ -216,6 +216,7 @@
 	}
 
 	&__button {
+		@extend %primary-button;
 		max-height: 50px;
 		align-self: start;
 	}
@@ -1206,6 +1207,7 @@
 	}
 
 	&__button {
+		@extend %white-button;
 		flex: 0 0 auto;
 	}
 
@@ -1387,6 +1389,7 @@
 	}
 
 	&__button {
+		@extend %primary-button;
 		height: 50px;
 	}
 

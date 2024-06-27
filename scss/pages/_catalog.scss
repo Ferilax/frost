@@ -259,7 +259,8 @@
 
 // КНОПКА ОТКРЫТИЯ ФИЛЬТРОВ -------------------------------------------------------------------------------
 .catalog-filter-trigger {
-	@extend %primary-button-icon-text;
+	@extend %primary-button;
+	height: 60px;
 
 	align-self: start;
 
