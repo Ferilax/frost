@@ -1,0 +1,30 @@
+.reviews-title {
+	@extend %h1;
+}
+
+.reviews {
+	padding: 60px 0;
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: 60px;
+	}
+
+	&__footer {
+		margin-top: 60px;
+
+		display: flex;
+		justify-content: space-between;
+	}
+
+	@media (max-width: 600px) {
+		padding: 20px 0;
+
+		&__footer {
+			flex-direction: column;
+			gap: 20px;
+			align-items: start;
+		}
+	}
+}

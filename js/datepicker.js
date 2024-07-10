@@ -12,6 +12,7 @@ const ru = {
 }
 Datepicker.locales["ru"] = ru;
 
+// Настройки
 function initDatepicker(element) {
 	if (element) {
 		const datepicker = new Datepicker(element, {
@@ -25,14 +26,23 @@ function initDatepicker(element) {
 		element.addEventListener('changeMonth', keepFirstWord);
 	}
 }
-// ----------------------------------------------------------------------------------------------
+
+// Инициализация
 const allDatepickers = document.querySelectorAll(".datepicker-component");
 
 allDatepickers.forEach(el => {
 	initDatepicker(el);
+
+	el.addEventListener("blur", () => {
+		if (el.value) {
+			el.parentElement.classList.add("filled");
+		} else {
+			el.parentElement.classList.remove("filled");
+		}
+	})
 })
 
-// ----------------------------------------------------------------------------------------------
+// Изменять надписи
 const titles = document.querySelectorAll(".datepicker-controls .view-switch");
 function keepFirstWord() {
 	titles.forEach(el => {
@@ -40,4 +50,4 @@ function keepFirstWord() {
 		el.innerHTML = words.slice(0, 1).join(' ');
 	})
 }
-keepFirstWord()
+keepFirstWord();

@@ -1,0 +1,49 @@
+// ПРЕИМУЩЕСТВА -------------------------------------------------------------------------------
+.advantages {
+	padding: 60px 0;
+
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: 20px;
+	}
+
+	&__name {
+		font-size: 24px;
+		font-weight: 700;
+		margin-top: 30px;
+	}
+
+	&__text {
+		font-size: 14px;
+		margin-top: 20px;
+	}
+
+	@media (max-width: 1500px) {
+		padding: 40px 0;
+	}
+
+	@include lg-d {
+
+		&__body {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 30px;
+		}
+	}
+
+	@include md-d {
+		padding: 20px 0;
+
+		&__body {
+			gap: 20px;
+		}
+	}
+
+	@media (max-width: 600px) {
+		padding: 16px 0;
+
+		&__body {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}

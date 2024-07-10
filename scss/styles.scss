@@ -3,20 +3,39 @@
 @import "fonts";
 @import "vars";
 @import "breakpoints";
+@import "templates"; 
 
-@import "templates";
-
-@import "components/product";
+// Компоненты
+@import "components/product-component";
 @import "components/breadcrumbs";
 @import "components/banners";
 @import "components/modals";
-@import "header";
-@import "footer";
+@import "components/advantages";
+@import "components/event-component";
+@import "components/pagination";
+@import "components/slider-with-minimap";
+@import "components/viewer";
+@import "components/review-component";
+@import "components/product-card";
+@import "components/product-similar";
+@import "components/header";
+@import "components/footer";
 
+// Страницы
 @import "pages/main";
 @import "pages/contacts";
 @import "pages/catalog";
 @import "pages/about-us";
+@import "pages/events";
+@import "pages/event";
+@import "pages/product";
+@import "pages/delivery";
+@import "pages/partnership";
+@import "pages/reviews";
+@import "pages/basket";
+@import "pages/order-processing";
+@import "pages/search";
+@import "pages/404";
 
 html {
 	scroll-behavior: smooth;
@@ -51,8 +70,6 @@ main {
 	}
 }
 
-// ---------------------------------------------
-
 .container {
 	max-width: 1920px;
 	padding: 0 80px;
@@ -71,6 +88,9 @@ main {
 	}
 }
 
+// ------------------------------------------------------------------------------------------
+
+// Свайпер (библиотека)
 swiper-container {
 	&::part(pagination) {
 		width: auto;
@@ -99,37 +119,12 @@ swiper-container {
 	}
 }
 
-.pagination {
-	width: auto;
-	height: auto;
-
-	display: flex;
-	gap: 8px;
-	position: absolute;
-
-	.swiper-pagination-bullet {
-		width: 8px;
-		height: 8px;
-		margin: 0;
-		border-radius: 1px;
-		background: $grey;
-		opacity: 1;
-	}
-
-	.swiper-pagination-bullet-active {
-		background: $primary;
-		width: 24px;
-		height: 8px;
-		margin: 0;
-		border-radius: 1px;
-		opacity: 1;
-	}
-}
-
+// Навигация свайпера
 .navigation {
 	display: flex;
 	border-radius: 10px;
 	overflow: hidden;
+	flex: 0 0 auto;
 
 	&__prev,
 	&__next {
@@ -154,6 +149,7 @@ swiper-container {
 	}
 }
 
+// Селектор (библиотека)
 .choices {
 	&:hover {
 		.choices__inner {
@@ -217,6 +213,16 @@ swiper-container {
 		align-items: center;
 		border: 1px solid $grey2;
 		background: white;
+	}
+
+	&.filled {
+		.choices__inner {
+			border: 1px solid $black;
+		}
+		
+		&::after {
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M6 9L12 15L18 9' stroke='%23262626' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+		}
 	}
 
 	.choices__item {
@@ -291,8 +297,7 @@ swiper-container {
 
 }
 
-// -----------------------------------------------------------------------
-
+// Селеткор даты (библиотека)
 .datepicker {
 	transform: translateY(-1px);
 	width: 100%;

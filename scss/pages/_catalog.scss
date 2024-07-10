@@ -90,8 +90,6 @@
 		&_hide {
 			display: none;
 		}
-
-		&_show {}
 	}
 
 	&.show {
@@ -243,7 +241,8 @@
 			font-size: 16px;
 		}
 
-		&__text, &__tel {
+		&__text,
+		&__tel {
 			font-size: 12px;
 		}
 
@@ -274,9 +273,6 @@
 // ФИЛЬТРЫ -------------------------------------------------------------------------------
 .catalog-filters {
 	transition: 0.2s;
-
-	&__filter {
-	}
 
 	&__filter-2 {
 		margin-top: 40px;
@@ -456,15 +452,27 @@
 		}
 	}
 
-	@media (max-width: 500px) {
-		&__grid {
-			grid-template-columns: repeat(1, 1fr);
-		}
-
+	@media (max-width: 600px) {
 		&__bottom {
 			flex-direction: column;
 			align-items: start;
 			margin-top: 20px;
+			gap: 20px;
 		}
+	}
+
+	@media (max-width: 500px) {
+		&__grid {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}
+
+// БАННЕР: ЗАДАТЬ ВОПРОС -------------------------------------------------------------------
+.catalog-banner-question {
+	margin-top: 60px;
+
+	@media (max-width: 600px) {
+		margin-top: 40px;
 	}
 }

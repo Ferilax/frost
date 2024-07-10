@@ -6,6 +6,9 @@
 		color: $black;
 		transition: 0.2s;
 		position: relative;
+		padding-bottom: 2px;
+
+		line-height: 2;
 
 		&:hover {
 			color: $primary;
@@ -13,16 +16,7 @@
 
 		&.current {
 			color: $primary-hover;
-
-			&::after {
-				content: "";
-				position: absolute;
-				bottom: -3px;
-				left: 0;
-				width: 100%;
-				height: 1px;
-				background: $primary-hover;
-			}
+			border-bottom: 1px solid $primary-hover;
 		}
 
 		&.disabled {

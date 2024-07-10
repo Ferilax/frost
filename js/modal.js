@@ -20,9 +20,10 @@ function setModal(modal, trigger) {
 		const closeButton = e.target.closest(".m-close");
 		const modalBody = e.target.closest(".m-body");
 		const datepicker = e.target.closest(".datepicker-view");
+		const playButton = e.target.closest(".play-button");
 
 
-		if (closeButton || !modalBody && !datepicker) {
+		if (closeButton || !modalBody && !datepicker && !playButton) {
 			modal.classList.remove("open");
 			body.classList.remove("lock");
 			document.removeEventListener("keydown", preventTab);
@@ -67,7 +68,7 @@ function setModalOnMultipleTrigger(modal, triggersClassName, close) {
 	});
 }
 
-//------------------------------------------------------------------
+// Инициализация ------------------------------------------------------------------
 
 const headerModal = document.querySelector(".modal-header");
 const headerModalTrigger = document.getElementById("header-search");
@@ -87,3 +88,8 @@ setModal(questionModal, questionModalTrigger);
 
 const addBasketModal = document.getElementById("modal-add-basket");
 setModalOnMultipleTrigger(addBasketModal, ".modal-add-basket-trigger");
+
+// ---
+const videoViewer = document.getElementById("video-viewer");
+const videoViewerTrigger = document.getElementById("video-viewer-trigger");
+setModal(videoViewer, videoViewerTrigger);

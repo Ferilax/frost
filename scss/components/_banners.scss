@@ -1,5 +1,4 @@
-.banner {
-	margin-top: 60px;
+.banner-question {
 	background: url("../img/pictures/contacts-banner.jpg") 0% 50%/cover no-repeat;
 	background-size: 120%;
 
@@ -27,6 +26,7 @@
 		&__body {
 			padding: 40px 0;
 		}
+
 		&__title {
 			font-size: 32px;
 		}
@@ -34,6 +34,7 @@
 
 	@include lg-d {
 		background-size: 150%;
+
 		&__text {
 			margin-top: 24px;
 		}
@@ -45,6 +46,7 @@
 
 	@include md-d {
 		background-size: 200%;
+
 		&__body {
 			padding: 40px 0;
 		}
@@ -53,9 +55,11 @@
 	@media (max-width: 600px) {
 		background-size: 280%;
 		background-position: 10% 50%;
+
 		&__body {
 			padding: 20px 0;
 		}
+
 		&__title {
 			font-size: 20px;
 		}

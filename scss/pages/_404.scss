@@ -1,0 +1,69 @@
+.main-error {
+	background: url("../img/pictures/error-main.jpg") 50%/cover no-repeat;
+
+	@media (max-width: 600px) {
+		background: url("../img/pictures/error-main.jpg") 63%/cover no-repeat;
+	}
+}
+
+.error-title {
+	@extend %h1;
+}
+
+.error {
+	padding: 24px 0 220px;
+
+	&__body {}
+
+	&__text {
+		font-size: 18px;
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+		margin-top: 60px;
+	}
+
+	&__home {
+		@extend %primary-button;
+		height: 60px;
+	}
+
+	&__back {
+		padding: 0 32px 0 20px;
+		@extend %secondary-button;
+		height: 60px;
+		gap: 8px;
+	}
+
+	@media (max-width: 1600px) {
+		padding: 24px 0 240px;
+
+		&__buttons {
+			margin-top: 40px;
+		}
+	}
+
+	@include md-d {
+		padding: 24px 0 250px;
+		&__buttons {
+			margin-top: 32px;
+		}
+	}
+
+	@media (max-width: 600px) {
+		padding-bottom: 160px;
+		&__text {
+			font-size: 16px;
+		}
+
+		&__buttons {
+			flex-direction: column;
+			display: inline-flex;
+			gap: 14px;
+			align-items: stretch;
+		}
+	}
+}

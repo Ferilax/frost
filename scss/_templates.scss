@@ -76,7 +76,8 @@
 
 	}
 
-	button {
+	button,
+	a {
 		background: $primary;
 		flex: 0 0 60px;
 		min-height: 60px;
@@ -97,7 +98,8 @@
 	&:hover {
 		border: 1px solid $primary-hover;
 
-		button {
+		button,
+		a {
 			background: $primary-hover;
 		}
 	}
@@ -105,7 +107,8 @@
 	&:focus-within {
 		border: 1px solid $primary;
 
-		button {
+		button,
+		a {
 			background: $primary;
 		}
 	}
@@ -142,6 +145,10 @@
 	&::placeholder {
 		color: $grey2;
 	}
+
+	&:not(:placeholder-shown) {
+		border: 1px solid $black;
+	}
 }
 
 //? Обертка, внутри которой инпут
@@ -174,6 +181,12 @@
 		}
 	}
 
+	&.filled {
+		&::after {
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z' stroke='%23262626' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16 2V6' stroke='%23262626' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 2V6' stroke='%23262626' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3 10H21' stroke='%23262626' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+		}
+	}
+
 	input {
 		cursor: pointer;
 		width: 100%;
@@ -199,6 +212,10 @@
 			border: 1px solid $black;
 			border-radius: 10px 10px 0 0;
 		}
+
+		&:not(:placeholder-shown) {
+			border: 1px solid $black;
+		}
 	}
 
 	.datepicker-input.in-edit {
@@ -221,6 +238,7 @@
 	color: white;
 	font-size: 14px;
 	transition: 0.2s;
+	cursor: pointer;
 
 	display: flex;
 	align-items: center;
@@ -348,15 +366,43 @@
 	font-weight: 800;
 	line-height: 1;
 
+	margin-bottom: 60px;
+	margin-top: 32px;
+
 	@media (max-width: 1500px) {
 		font-weight: 700;
 		font-size: 40px;
+
+		margin-bottom: 40px;
+	}
+
+	@include lg-d {
+		margin-bottom: 20px;
+	}
+
+	@include md-d {
+		margin-top: 24px;
 	}
 
 	@media (max-width: 600px) {
 		font-weight: 700;
 		line-height: 1.2;
 		font-size: 28px;
+
+		margin-bottom: 16px;
+	}
+}
+
+%h2 {
+	font-size: 40px;
+	font-weight: 700;
+
+	@media (max-width: 1500px) {
+		font-size: 32px;
+	}
+
+	@media (max-width: 600px) {
+		font-size: 20px;
 	}
 }
 
@@ -376,4 +422,125 @@
 	@media (max-width: 600px) {
 		padding: 0 16px;
 	}
+}
+
+%section-padding {
+	padding: 60px 0;
+
+
+	@media (max-width: 1600px) {
+		padding: 40px 0;
+	}
+
+	@include md-d {
+		padding: 20px 0;
+	}
+
+	@media (max-width: 600px) {
+		padding: 16px 0;
+	}
+}
+
+%list-item {
+	padding-left: 18px;
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 6px;
+		left: 0;
+		width: 10px;
+		height: 10px;
+		background: $primary;
+	}
+
+	@media (max-width: 1500px) {
+		&::before {
+			top: 4px;
+		}
+	}
+}
+
+%viewer {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-blend-mode: darken;
+
+	.play-button {
+		cursor: pointer;
+	}
+
+	iframe {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+%swiper-pagination {
+	width: auto;
+	height: auto;
+
+	display: none;
+	justify-content: center;
+	gap: 8px;
+
+	.swiper-pagination-bullet {
+		width: 8px;
+		height: 8px;
+		margin: 0;
+		border-radius: 1px;
+		background: $grey;
+		opacity: 1;
+	}
+
+	.swiper-pagination-bullet-active {
+		background: $primary;
+		width: 24px;
+		height: 8px;
+		margin: 0;
+		border-radius: 1px;
+		opacity: 1;
+	}
+
+	@media (max-width: 600px) {
+		display: flex;
+	}
+}
+
+%bonus-action {
+	padding: 4px 8px;
+	border-radius: 6px;
+	white-space: nowrap;
+
+	color: #B71C1C;
+	background: #FFCDD2;
+
+	font-size: 14px;
+}
+
+%bonus-daily {
+	padding: 4px 8px;
+	border-radius: 6px;
+	white-space: nowrap;
+
+	color: #E65100;
+	background: #FFF3E0;
+
+	font-size: 14px;
+}
+
+%bonus-new {
+	padding: 4px 8px;
+	border-radius: 6px;
+	white-space: nowrap;
+
+	color: $primary;
+	background: #CFE0E0;
+
+	font-size: 14px;
 }
